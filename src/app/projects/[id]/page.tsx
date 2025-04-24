@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React from 'react';
-import { Button, Space, Paper, Text, alpha } from '@mantine/core';
+import { Button, Space} from '@mantine/core';
 import { CompositeChart } from '@mantine/charts';
 import '@mantine/charts/styles.css';
 

@@ -1,10 +1,13 @@
 export default function About() {
   return (
     <div>
-      <h1>About this site</h1>
-      <p>This site is a Scratch project search engine.</p>
-      <p>It allows you to search for Scratch projects by tags.</p>
-      <p>It is built using Next.js and Mantine.</p>
+      <h1>サイトについて</h1>
+      <h2>使用技術</h2>
+      <ul>
+        <li>www: Next.js + TypeScript + Mantine</li>
+        <li>crawler: Python</li>
+      </ul>
+      <p>今後追記します。</p>
     </div>
   );
 }
