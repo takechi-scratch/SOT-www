@@ -7,6 +7,7 @@ import { AppShell, Burger, Text, NavLink, Flex } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { notifications } from "@mantine/notifications";
 
 export default function App({ children }: { children: React.ReactNode }) {
   const [opened, { toggle }] = useDisclosure();
@@ -20,7 +21,11 @@ export default function App({ children }: { children: React.ReactNode }) {
         if (projectId) {
             router.push(`/projects/${projectId}`);
           } else {
-            alert("Invalid Scratch project URL.");
+            notifications.show({
+              title: "エラー",
+              message: "URLが正しくありません。",
+              color: "red",
+            });
           }
         }
   }
