@@ -5,10 +5,11 @@ import { Button, Space } from "@mantine/core";
 import { CompositeChart } from "@mantine/charts";
 import "@mantine/charts/styles.css";
 import { fetchProjectData } from "./fetch";
+import { projectData } from "./projects";
 
 const ProjectDetails = ({ params }: { params: Promise<{ id: string }> }) => {
   const [projectId, setProjectId] = useState<string | null>(null);
-  const [data, setData] = useState<any | null>(null);
+  const [data, setData] = useState<projectData|null>(null);
 
   useEffect(() => {
     if (projectId) {
